@@ -1,6 +1,6 @@
 const fs = require('fs'); // file system
 const Discord = require('discord.js'); // discord.js
-const { prefix, DBhost, token, DBuser, DBpassword, DBtable, id} = require('./settings.json'); // settings from config file
+const { prefix, id, token} = require('./settings.json'); // settings from config file
 const mysql = require('mysql'); // mysql
 
 const client = new Discord.Client(); // create discord client
@@ -11,20 +11,6 @@ const { CommandHandler } = require("djs-commands")
 const CH = new CommandHandler({
     folder: __dirname + '/commands/',
     prefix: [prefix]
-});
-
-// mysql databse / connection
-var con = mysql.createConnection({
-	host: DBhost,
-	user: DBuser,
-	password: DBpassword,
-    database: DBtable
-});
-
-// check if mysql is connected
-con.connect(err => {
-	if(err) throw err;
-	console.log ('connected to database...');
 });
 
 // trigger on startup
