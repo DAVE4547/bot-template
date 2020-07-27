@@ -1,0 +1,19 @@
+{
+  "name": "base-mod-bot",
+  "version": "1.0.0",
+  "description": "Base code for fiveer moderation bot that can be customised",
+  "main": "index.js",
+  "scripts": {
+    "test": "!!Hello"
+  },
+  "author": "DAVE4547",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@pipedreamhq/sdk": "^0.4.1",
+    "discord.js": "^12.2.0",
+    "djs-commands": "^1.2.2",
+    "moment": "^2.27.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.4"
+  }
+}
